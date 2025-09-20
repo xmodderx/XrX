@@ -78,7 +78,7 @@ StatusLabel.Parent = MainFrame
 
 -- Simula a lógica dos botões
 GetKeyButton.MouseButton1Click:Connect(function()
-    local texto = "https://monumental-mermaid-7f06e9.netlify.app/"
+    local texto = "https://cheerful-tapioca-61183d.netlify.app/"
     pcall(function()
         setclipboard(texto) -- copia para a área de transferência do dispositivo local
     end)
