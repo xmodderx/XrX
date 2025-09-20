@@ -1,0 +1,90 @@
+-- Script UI - XrX Demo Script
+
+-- Cria uma nova tela de UI
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "XrXScriptDemo"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Cria o frame principal
+local MainFrame = Instance.new("Frame")
+MainFrame.Name = "MainFrame"
+MainFrame.Size = UDim2.new(0.4, 0, 0.35, 0)
+MainFrame.Position = UDim2.new(0.3, 0, 0.3, 0)
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+MainFrame.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+MainFrame.BorderColor3 = Color3.new(0, 0, 0)
+MainFrame.BorderSizePixel = 2
+MainFrame.Parent = ScreenGui
+
+-- Cria o título
+local Title = Instance.new("TextLabel")
+Title.Name = "Title"
+Title.Size = UDim2.new(1, 0, 0.2, 0)
+Title.Position = UDim2.new(0, 0, 0, 0)
+Title.BackgroundColor3 = Color3.new(0.15, 0.15, 0.15)
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.Font = Enum.Font.SourceSans
+Title.TextSize = 24
+Title.Text = "XrX Script Demo"
+Title.Parent = MainFrame
+
+-- Cria a barra de texto para a chave
+local KeyTextBox = Instance.new("TextBox")
+KeyTextBox.Name = "KeyTextBox"
+KeyTextBox.Size = UDim2.new(0.8, 0, 0.15, 0)
+KeyTextBox.Position = UDim2.new(0.1, 0, 0.3, 0)
+KeyTextBox.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+KeyTextBox.TextColor3 = Color3.new(1, 1, 1)
+KeyTextBox.PlaceholderText = "Enter your key here..."
+KeyTextBox.Font = Enum.Font.SourceSans
+KeyTextBox.TextSize = 18
+KeyTextBox.Parent = MainFrame
+
+-- Cria o botão "Get Key"
+local GetKeyButton = Instance.new("TextButton")
+GetKeyButton.Name = "GetKeyButton"
+GetKeyButton.Size = UDim2.new(0.4, 0, 0.15, 0)
+GetKeyButton.Position = UDim2.new(0.1, 0, 0.55, 0)
+GetKeyButton.BackgroundColor3 = Color3.new(0.1, 0.6, 0.1)
+GetKeyButton.TextColor3 = Color3.new(1, 1, 1)
+GetKeyButton.Font = Enum.Font.SourceSans
+GetKeyButton.TextSize = 20
+GetKeyButton.Text = "Get Key"
+GetKeyButton.Parent = MainFrame
+
+-- Cria o botão "Verify Key"
+local VerifyKeyButton = Instance.new("TextButton")
+VerifyKeyButton.Name = "VerifyKeyButton"
+VerifyKeyButton.Size = UDim2.new(0.4, 0, 0.15, 0)
+VerifyKeyButton.Position = UDim2.new(0.5, 0, 0.55, 0)
+VerifyKeyButton.BackgroundColor3 = Color3.new(0.1, 0.6, 0.1)
+VerifyKeyButton.TextColor3 = Color3.new(1, 1, 1)
+VerifyKeyButton.Font = Enum.Font.SourceSans
+VerifyKeyButton.TextSize = 20
+VerifyKeyButton.Text = "Verify Key"
+VerifyKeyButton.Parent = MainFrame
+
+-- Cria a etiqueta de status
+local StatusLabel = Instance.new("TextLabel")
+StatusLabel.Name = "StatusLabel"
+StatusLabel.Size = UDim2.new(0.8, 0, 0.1, 0)
+StatusLabel.Position = UDim2.new(0.1, 0, 0.8, 0)
+StatusLabel.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+StatusLabel.TextColor3 = Color3.new(1, 1, 1)
+StatusLabel.Font = Enum.Font.SourceSans
+StatusLabel.TextSize = 18
+StatusLabel.Text = ""
+StatusLabel.Parent = MainFrame
+
+-- Simula a lógica dos botões
+GetKeyButton.MouseButton1Click:Connect(function()
+    local texto = "https://monumental-mermaid-7f06e9.netlify.app/"
+    pcall(function()
+        setclipboard(texto) -- copia para a área de transferência do dispositivo local
+    end)
+    StatusLabel.Text = "Paste it into your browser to get the key"
+end)
+
+VerifyKeyButton.MouseButton1Click:Connect(function()
+    StatusLabel.Text = "Key inválido"
+end)
