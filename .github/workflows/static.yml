@@ -1,0 +1,161 @@
+# <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XrX Premium Script - Steal A A Brainrot</title>
+    <style>
+        body {
+            background-color: #120b22;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .container {
+            background-color: #1a102a;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+        h1, p {
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .info-block {
+            background-color: #291a38;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .info-block h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .info-block p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #aaa;
+        }
+        .status-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .status-block {
+            background-color: #291a38;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .status-block .label {
+            color: #aaa;
+        }
+        .status-block .value {
+            display: flex;
+            align-items: center;
+        }
+        .status-dot {
+            height: 10px;
+            width: 10px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .get-key-button {
+            background-color: #6a1a98;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        .get-key-button:hover {
+            background-color: #5c1682;
+        }
+        .description {
+            text-align: center;
+            font-size: 14px;
+            color: #aaa;
+            margin-top: 20px;
+        }
+        .title-text {
+            text-align: center;
+            font-size: 14px;
+            color: #aaa;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>XrX Premium Script - Steal A A Brainrot</h1>
+        <p>Get your trial key — quick preview. Minimal details and status blocks below.</p>
+        
+        <div class="info-block">
+            <h3>Invisible</h3>
+            <p>Temporary cloak</p>
+        </div>
+        <div class="info-block">
+            <h3>Infinite Jump</h3>
+            <p>Extended jumps</p>
+        </div>
+        <div class="info-block">
+            <h3>Semi Wallhack</h3>
+            <p>Partial visibility</p>
+        </div>
+
+        <div class="status-section">
+            <div class="status-block">
+                <span class="label">Script Status</span>
+                <span class="value"><span class="status-dot"></span>Online</span>
+            </div>
+            <div class="status-block">
+                <span class="label">Key Server</span>
+                <span class="value"><span class="status-dot"></span>Online</span>
+            </div>
+            <div class="status-block">
+                <span class="label">Players</span>
+                <span class="value">123</span>
+            </div>
+            <div class="status-block">
+                <span class="label">Clicks</span>
+                <span class="value">0</span>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <a href="https://www.roblox.com/share?code=4603924b45f58d47b13ee97da96f9a5d&type=Server" target="_blank">
+                <button class="get-key-button">GET TRIAL KEY</button>
+            </a>
+        </div>
+
+        <p class="description">Opens the Roblox share link in a new tab, then opens the cooldown page in another tab.</p>
+    </div>
+    
+    <p class="title-text">Title: XrX Premium Script - Steal A A Brainrot</p>
+
+</body>
+</html>
