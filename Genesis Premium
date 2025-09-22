@@ -1,0 +1,110 @@
+-- Script UI - Genesis Key System
+
+-- Cria uma nova tela de UI
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "GenesisUI"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Cria o frame principal
+local MainFrame = Instance.new("Frame")
+MainFrame.Name = "MainFrame"
+MainFrame.Size = UDim2.new(0.4, 0, 0.35, 0)
+MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+MainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+MainFrame.BorderSizePixel = 0
+MainFrame.Parent = ScreenGui
+
+-- Cantos arredondados
+local UICorner = Instance.new("UICorner")
+UICorner.CornerRadius = UDim.new(0, 8)
+UICorner.Parent = MainFrame
+
+-- Cria o título
+local Title = Instance.new("TextLabel")
+Title.Name = "Title"
+Title.Size = UDim2.new(1, 0, 0.15, 0)
+Title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.Font = Enum.Font.SourceSansBold
+Title.TextSize = 22
+Title.Text = "Genesis Key System"
+Title.Parent = MainFrame
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.CornerRadius = UDim.new(0, 8)
+UICorner2.Parent = Title
+
+-- Cria a barra de texto para a chave (sem dropdown)
+local KeyTextBox = Instance.new("TextBox")
+KeyTextBox.Name = "KeyTextBox"
+KeyTextBox.Size = UDim2.new(0.8, 0, 0.18, 0)
+KeyTextBox.Position = UDim2.new(0.1, 0, 0.25, 0)
+KeyTextBox.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+KeyTextBox.TextColor3 = Color3.new(1, 1, 1)
+KeyTextBox.PlaceholderText = "Insira sua key aqui..."
+KeyTextBox.ClearTextOnFocus = false
+KeyTextBox.Font = Enum.Font.SourceSans
+KeyTextBox.TextSize = 18
+KeyTextBox.Parent = MainFrame
+
+local UICorner3 = Instance.new("UICorner")
+UICorner3.CornerRadius = UDim.new(0, 6)
+UICorner3.Parent = KeyTextBox
+
+-- Cria o botão "Get Key"
+local GetKeyButton = Instance.new("TextButton")
+GetKeyButton.Name = "GetKeyButton"
+GetKeyButton.Size = UDim2.new(0.35, 0, 0.15, 0)
+GetKeyButton.Position = UDim2.new(0.1, 0, 0.55, 0)
+GetKeyButton.BackgroundColor3 = Color3.fromRGB(0, 120, 255)
+GetKeyButton.TextColor3 = Color3.new(1, 1, 1)
+GetKeyButton.Font = Enum.Font.SourceSansBold
+GetKeyButton.TextSize = 20
+GetKeyButton.Text = "Get Key"
+GetKeyButton.Parent = MainFrame
+
+local UICorner4 = Instance.new("UICorner")
+UICorner4.CornerRadius = UDim.new(0, 6)
+UICorner4.Parent = GetKeyButton
+
+-- Cria o botão "Verify Key"
+local VerifyKeyButton = Instance.new("TextButton")
+VerifyKeyButton.Name = "VerifyKeyButton"
+VerifyKeyButton.Size = UDim2.new(0.35, 0, 0.15, 0)
+VerifyKeyButton.Position = UDim2.new(0.55, 0, 0.55, 0)
+VerifyKeyButton.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
+VerifyKeyButton.TextColor3 = Color3.new(1, 1, 1)
+VerifyKeyButton.Font = Enum.Font.SourceSansBold
+VerifyKeyButton.TextSize = 20
+VerifyKeyButton.Text = "Verify Key"
+VerifyKeyButton.Parent = MainFrame
+
+local UICorner5 = Instance.new("UICorner")
+UICorner5.CornerRadius = UDim.new(0, 6)
+UICorner5.Parent = VerifyKeyButton
+
+-- Cria a etiqueta de status
+local StatusLabel = Instance.new("TextLabel")
+StatusLabel.Name = "StatusLabel"
+StatusLabel.Size = UDim2.new(0.9, 0, 0.1, 0)
+StatusLabel.Position = UDim2.new(0.05, 0, 0.8, 0)
+StatusLabel.BackgroundTransparency = 1
+StatusLabel.TextColor3 = Color3.new(1, 1, 1)
+StatusLabel.Font = Enum.Font.SourceSans
+StatusLabel.TextSize = 16
+StatusLabel.Text = ""
+StatusLabel.Parent = MainFrame
+
+-- Função dos botões
+GetKeyButton.MouseButton1Click:Connect(function()
+    local texto = "https://monumental-mermaid-7f06e9.netlify.app/"
+    pcall(function()
+        setclipboard(texto)
+    end)
+    StatusLabel.Text = "Paste it into your browser to get the key"
+end)
+
+VerifyKeyButton.MouseButton1Click:Connect(function()
+    StatusLabel.Text = "Key inválido"
+end)
