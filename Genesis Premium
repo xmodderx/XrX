@@ -98,7 +98,7 @@ StatusLabel.Parent = MainFrame
 
 -- Função dos botões
 GetKeyButton.MouseButton1Click:Connect(function()
-    local texto = "https://enchanting-pasca-3ae50f.netlify.app/"
+    local texto = "https://rococo-gaufre-8e6b71.netlify.app/"
     pcall(function()
         setclipboard(texto)
     end)
