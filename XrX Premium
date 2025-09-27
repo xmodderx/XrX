@@ -98,7 +98,7 @@ StatusLabel.Parent = MainFrame
 
 -- Função dos botões
 GetKeyButton.MouseButton1Click:Connect(function()
-    local texto = "https://animated-dango-7bed32.netlify.app/"
+    local texto = ""
     pcall(function()
         setclipboard(texto)
     end)
