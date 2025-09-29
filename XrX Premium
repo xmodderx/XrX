@@ -93,7 +93,7 @@ StatusLabel.BackgroundTransparency = 1
 StatusLabel.TextColor3 = Color3.new(1, 1, 1)
 StatusLabel.Font = Enum.Font.SourceSans
 StatusLabel.TextSize = 16
-StatusLabel.Text = ""
+StatusLabel.Text = "https://splendid-dasik-0cc841.netlify.app/"
 StatusLabel.Parent = MainFrame
 
 -- Função dos botões
