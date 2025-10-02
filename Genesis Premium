@@ -1,4 +1,4 @@
--- Script UI - Genesis Key System
+-- Script UI - Vault Key System
 
 -- Cria uma nova tela de UI
 local ScreenGui = Instance.new("ScreenGui")
@@ -98,7 +98,7 @@ StatusLabel.Parent = MainFrame
 
 -- Função dos botões
 GetKeyButton.MouseButton1Click:Connect(function()
-    local texto = "https://fanciful-daifuku-57a65c.netlify.app/"
+    local texto = "https://stirring-salmiakki-67b285.netlify.app/"
     pcall(function()
         setclipboard(texto)
     end)
